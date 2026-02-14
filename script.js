@@ -28,6 +28,13 @@ document.addEventListener("keydown", function (e) {
         signinModal.classList.remove("active");
     }
 });
+<<<<<<< HEAD
 function openMatchmaking() {
     window.location.href = "matchmaking.html";
+=======
+function playVideo() {
+    const video = document.getElementById("promoVideo");
+    video.play();
+    document.querySelector(".play-btn").style.display = "none";
+>>>>>>> 3bdb7c74c685ab5241784ac25beb1706c17cf060
 }
