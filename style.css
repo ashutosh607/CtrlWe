@@ -471,3 +471,126 @@ background-color: #000; /* optional if you want clean background */
 .play-btn:hover {
     background: rgba(0,0,0,0.8);
 }
+/* --- Animation Keyframes --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseNeon {
+    0% { box-shadow: 0 0 5px var(--moss-green); }
+    50% { box-shadow: 0 0 20px var(--moss-green); }
+    100% { box-shadow: 0 0 5px var(--moss-green); }
+}
+.hero-text {
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-image-slot {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Apply staggered fade-in to your cards */
+.grid-container .card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggering the cards slightly */
+.grid-container a:nth-child(1) .card { animation-delay: 0.2s; }
+.grid-container a:nth-child(2) .card { animation-delay: 0.4s; }
+.grid-container a:nth-child(3) .card { animation-delay: 0.6s; }
+.grid-container a:nth-child(4) .card { animation-delay: 0.8s; }
+/* CTA Button Upgrade */
+.cta-btn {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--moss-green);
+    color: white;
+    box-shadow: 0 10px 20px rgba(112, 128, 93, 0.4);
+}
+
+/* Nav Item Upgrade */
+.nav-item:hover {
+    letter-spacing: 3px; /* Smooth text expansion */
+    color: white;
+}/* Feature Box Hover - Glassmorphism */
+.f-box {
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.f-box:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--moss-green);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Card Image Zoom Effect */
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover img {
+    transform: scale(1.15) rotate(1deg); /* Subtle zoom and tilt */
+}/* --- Responsive Navbar Styles --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%; /* Hides the menu off-screen */
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--dark-green);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0; /* Slides the menu in */
+    }
+
+    .nav-item {
+        margin: 15px 0;
+        display: block;
+    }
+
+    /* Animation for Hamburger to X */
+    #mobile-menu.is-active .bar:nth-child(2) { opacity: 0; }
+    #mobile-menu.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #mobile-menu.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* Hide toggle on desktop */
+.menu-toggle { display: none; }
