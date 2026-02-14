@@ -306,3 +306,54 @@ background-color: #000; /* optional if you want clean background */
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* 1. For Tablets (Laptops & iPads) */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column; /* Stacks text on top of image */
+        text-align: center;
+    }
+
+    .hero-image-slot {
+        width: 100%;
+        height: 300px; /* Reduces height so photo isn't too long */
+    }
+
+    .value-prop {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-layout {
+        flex-direction: column;
+    }
+}
+
+/* 2. For Mobile Phones */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Shrinks text so it doesn't overflow */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column: photo takes full width */
+        gap: 15px;
+    }
+
+    /* Essential to keep photos from cropping weirdly on small screens */
+    .card img, .hero-image-slot img {
+        height: 250px; 
+        object-fit: cover; 
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
