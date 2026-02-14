@@ -196,3 +196,14 @@ header {
     transform: scale(1.05);
 }
 
+.grid-container a {
+    text-decoration: none; /* Removes underlines */
+    display: block;        /* Ensures the link fills the whole card area */
+}
+
+.card img {
+    width: 100%;           /* Ensures the images fit perfectly inside the cards */
+    height: auto;
+    display: block;
+    border-radius: 8px;    /* Optional: matches your card corners */
+}
