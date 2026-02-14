@@ -1,0 +1,58 @@
+:root {
+    --dark-green: #2A3B27;
+    --moss-green: #70805D;
+    --warm-grey: #CBC8C4;
+    --neon-green: #4CAF50;
+    --gold: #FFD700;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: var(--warm-grey); color: var(--dark-green); }
+
+/* --- Navbar --- */
+header { background: var(--dark-green); display: flex; justify-content: center; position: sticky; top: 0; z-index: 100; }
+.navbar { width: 90%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+.logo { color: white; font-weight: 800; display: flex; align-items: center; }
+.logo-icon { background: var(--neon-green); color: var(--dark-green); padding: 2px 8px; border-radius: 4px; margin-right: 8px; }
+.logo span { color: var(--neon-green); }
+.nav-item { color: white; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+
+/* --- Search Area --- */
+.search-section { background: var(--dark-green); color: white; padding: 60px 20px; text-align: center; }
+.search-box { display: flex; gap: 10px; max-width: 500px; margin: 20px auto 0; }
+.search-box input { flex: 1; padding: 12px; border-radius: 6px; border: none; outline: none; }
+.search-btn { background: var(--neon-green); color: var(--dark-green); border: none; padding: 0 20px; border-radius: 6px; font-weight: 800; cursor: pointer; }
+
+/* --- Turf Cards --- */
+.results-section { padding: 40px 5%; max-width: 1100px; margin: 0 auto; }
+.turf-card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; }
+
+.rating { color: var(--gold); font-size: 14px; margin: 5px 0; }
+.price { font-weight: 800; font-size: 18px; color: var(--moss-green); margin-bottom: 15px; }
+
+.slot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.slot-btn { padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: white; cursor: pointer; font-weight: 600; font-size: 12px; }
+.slot-btn.selected { background: var(--dark-green) !important; color: white; border-color: var(--dark-green); }
+.slot-btn.booked { background: #f0f0f0; color: #ccc; cursor: not-allowed; border-style: dashed; }
+
+.book-now-btn {
+    width: 100%;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-now-btn:hover { background: var(--neon-green); color: var(--dark-green); }
+
+@media (max-width: 600px) {
+    .search-box { flex-direction: column; }
+    .slot-grid { grid-template-columns: repeat(3, 1fr); }
+}

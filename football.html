@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Search | TurfMatch</title>
+    <link rel="stylesheet" href="football.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                TURF<span>MATCH</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <h1>Find Football Turfs</h1>
+                <p>Top-rated arenas in Mumbai. Book your slot now.</p>
+                <div class="search-box">
+                    <input type="text" id="locationInput" placeholder="Try 'Vile Parle'...">
+                    <button onclick="filterTurfs()" class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div id="turfGrid" class="booking-grid">
+                <p class="placeholder-msg">Search a location to see ratings and availability.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="football.js"></script>
+</body>
+</html>
