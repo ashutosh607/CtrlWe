@@ -205,7 +205,6 @@ header {
     
 }
 
-<<<<<<< HEAD
 .grid-container a {
     text-decoration: none; /* Removes underlines */
     display: block;        /* Ensures the link fills the whole card area */
@@ -217,7 +216,6 @@ header {
     display: block;
     border-radius: 8px;    /* Optional: matches your card corners */
 }
-=======
 .value-image {
     width: 100%;
     height: 350px;   /* Set fixed height for the box */
@@ -305,4 +303,3 @@ background-color: #000; /* optional if you want clean background */
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
->>>>>>> 1be6fd7f93a2e9b405a94d2575f2370e385e1347
