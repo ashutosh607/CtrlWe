@@ -357,3 +357,69 @@ background-color: #000; /* optional if you want clean background */
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== Features Section ===== */
+.features {
+    background: var(--dark-green);
+    color: white;
+    padding: 100px 10%;
+}
+
+/* Layout */
+.features-layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: stretch;
+}
+
+/* ===== BIG Video Section ===== */
+.video-placeholder {
+    flex: 2;              /* 🔥 makes it bigger */
+    height: 500px;        /* bigger height */
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.play-icon {
+    font-size: 60px;
+    opacity: 0.8;
+}
+
+/* ===== Feature Grid ===== */
+.feature-grid {
+    flex: 1;              /* smaller than video */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ===== Feature Boxes Same Size ===== */
+.f-box {
+    background: rgba(255,255,255,0.05);
+    height: 160px;           /* same height */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+}
+
+.f-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===== Images Fit Properly ===== */
+.f-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 🔥 important */
+    display: block;
+}
