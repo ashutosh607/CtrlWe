@@ -3,12 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TurfMatch | Sports Booking & Matchmaking</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>hii</p>
-    <p>hi</p>
-    <script src="script.js"></script>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">TURF<span>MATCH</span></div>
+            <div class="nav-links">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#turfs" class="nav-item">Turfs</a>
+                <a href="#matchmaking" class="nav-item">Matchmaking</a>
+                <a href="#dashboard" class="nav-item">Dashboard</a>
+            </div>
+            <button class="role-btn">Provider Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="tagline">Mumbai's Premier Sports Hub</p>
+                    <h1>On-Demand Turf <br> & Matchmaking</h1>
+                    <button class="cta-btn">Book Now</button>
+                </div>
+                <div class="hero-image-slot">
+                    <div class="image-box">Live Turf Preview</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages" id="turfs">
+            <h2>Our Advantages</h2>
+            <p class="sub-heading">Find available slots for your favorite sports instantly.</p>
+            <div class="grid-container">
+                <div class="card">Football</div>
+                <div class="card">Cricket</div>
+                <div class="card">Badminton</div>
+                <div class="card">Pickleball</div>
+            </div>
+        </section>
+
+        <section class="value-prop" id="matchmaking">
+            <div class="value-text">
+                <h2>Value Proposition</h2>
+                <p>Never cancel a game again because of missing players. Our matchmaking engine connects solo players with teams needing an extra hand.</p>
+                <div class="item-row">
+                    <span><strong>Item One:</strong> Level-based matching</span>
+                    <span><strong>Item Two:</strong> Split-bill payments</span>
+                </div>
+            </div>
+            <div class="value-image">Matchmaking UI</div>
+        </section>
+
+        <section class="features" id="dashboard">
+            <div class="features-header">
+                <h2>Provider Features</h2>
+                <p>Manage multiple turfs, monitor slots in real-time, and handle booking conflicts seamlessly.</p>
+            </div>
+            <div class="features-layout">
+                <div class="video-placeholder">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="feature-grid">
+                    <div class="f-box">Slot Monitoring</div>
+                    <div class="f-box">Conflict Handling</div>
+                    <div class="f-box">Revenue Analytics</div>
+                    <div class="f-box">Player Logs</div>
+                    <div class="f-box">Secure Escrow</div>
+                    <div class="f-box">Instant Alerts</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
