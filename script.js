@@ -34,4 +34,4 @@ function playVideo() {
     const video = document.getElementById("promoVideo");
     video.play();
     document.querySelector(".play-btn").style.display = "none";
-}
+}}
