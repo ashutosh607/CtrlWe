@@ -1,5 +1,5 @@
 const scrollBtn = document.getElementById("scroll")
-
+const matchmakingpage=document.
 scrollBtn.addEventListener("click", function () {
     document.getElementById("dashboard").scrollIntoView({
         behavior: "smooth"
@@ -28,3 +28,6 @@ document.addEventListener("keydown", function (e) {
         signinModal.classList.remove("active");
     }
 });
+function openMatchmaking() {
+    window.location.href = "matchmaking.html";
+}
