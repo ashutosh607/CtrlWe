@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -19,8 +21,8 @@
                 <a href="#dashboard" class="nav-item">Dashboard</a>
             </div>
             <div>
-            <button class="role-btn">Provider Mode</button>
-            <button class="role-btn login">Sign in</button>
+                <button class="role-btn" id="scroll">Provider Mode</button>
+                <button class="role-btn signin-btn">Sign in</button>
             </div>
         </nav>
     </header>
@@ -35,12 +37,12 @@
                 </div>
                 <div class="hero-image-slot">
                     <div class="image-box"><img src="assests/turf.png" alt=""></div>
-            </div>
+                </div>
         </section>
 
-      <section class="advantages" id="turfs">
-    <h2>Our Advantages</h2>
-    <p class="sub-heading">Find available slots for your favorite sports instantly.</p>
+        <section class="advantages" id="turfs">
+            <h2>Our Advantages</h2>
+            <p class="sub-heading">Find available slots for your favorite sports instantly.</p>
 
     <div class="grid-container">
         <a href="football.html" class="card">
@@ -60,24 +62,56 @@
         </a>
     </div>
 </section>
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="assests/football2.png" alt="Football">
+
+                </div>
+
+                <div class="card">
+                    <img src="assests/batminton1.png" alt="Badminton">
+
+                </div>
+
+                <div class="card">
+                    <img src="assests/image.png" alt="Pickleball">
+
+                </div>
+
+                <div class="card">
+                    <img src="assests/tennis1.png" alt="Tennis">
+
+                </div>
+
+            </div>
+        </section>
 
 
         <section class="value-prop" id="matchmaking">
             <div class="value-text">
                 <h2>Value Proposition</h2>
-                <p>Never cancel a game again because of missing players. Our matchmaking engine connects solo players with teams needing an extra hand.</p>
+                <p>
+                    Never cancel a game again because of missing players.
+                    Our matchmaking engine connects solo players with teams needing an extra hand.
+                </p>
+
                 <div class="item-row">
-                    <span><strong>Item One:</strong> Level-based matching</span>
-                    <span><strong>Item Two:</strong> Split-bill payments</span>
+                    <span><strong>Level-based matching</strong></span>
+                    <span><strong>Split-bill payments</strong></span>
                 </div>
             </div>
-            <div class="value-image">Matchmaking UI</div>
+
+            <div class="value-image">
+                <img src="assests/ui.png" alt="Matchmaking UI" class="match-img">
+            </div>
         </section>
 
         <section class="features" id="dashboard">
             <div class="features-header">
                 <h2>Provider Features</h2>
-                <p>Manage multiple turfs, monitor slots in real-time, and handle booking conflicts seamlessly.</p>
+                <p>Manage multiple turfs, monitor slots in real-time, and handle booking conflicts
+                    seamlessly.</p>
             </div>
             <div class="features-layout">
                 <div class="video-placeholder">
@@ -92,8 +126,25 @@
                     <div class="f-box">Instant Alerts</div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
+    
+<!-- Overlay -->
+<div class="overlay"></div>
 
+<!-- Sign Up Modal -->
+<div class="signin-modal">
+    <h2>Create Account</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <input type="password" placeholder="Password">
+    <input type="password" placeholder="Confirm Password">
+
+    <button class="signin-submit">Sign Up</button>
+</div>
+
+<script src="script.js"></script>
 </body>
+
 </html>
