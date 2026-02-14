@@ -16,7 +16,7 @@ header { background: var(--dark-green); display: flex; justify-content: center; 
 .logo { color: white; font-weight: 800; display: flex; align-items: center; }
 .logo-icon { background: var(--neon-green); color: var(--dark-green); padding: 2px 8px; border-radius: 4px; margin-right: 8px; }
 .logo span { color: var(--neon-green); }
-.nav-item { color: white; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.nav-item { color: white; text-decoration: none; font-size: 15px; font-weight: 700; text-transform: uppercase; }
 
 /* --- Search Area --- */
 .search-section { background: var(--dark-green); color: white; padding: 60px 20px; text-align: center; }
@@ -55,4 +55,43 @@ header { background: var(--dark-green); display: flex; justify-content: center; 
 @media (max-width: 600px) {
     .search-box { flex-direction: column; }
     .slot-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.turf-card {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.turf-image {
+    width: 220px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.turf-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.turf-details {
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .turf-card {
+        flex-direction: column;
+    }
+
+    .turf-image {
+        width: 100%;
+        height: 200px;
+    }
 }

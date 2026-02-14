@@ -5,7 +5,8 @@ const turfs = [
         price: "1200", 
         rating: "4.8", 
         slots: ["17:00", "18:00", "21:00"], 
-        booked: ["19:00", "20:00"] 
+        booked: ["19:00", "20:00"] ,
+        img:"https://lh3.googleusercontent.com/gps-cs-s/AHVAwerb66QEezXF9M_dp7MwOF6sWQqCEXFs1pady7wuqXgjoTnP8ExOaZbkQVuD-3J684HTjfyVF1DjhqYVCj2dnZwe-ETtS3qW2BOWQMbxGtlP_E9_YPOoaeRoWhZFGJXkjtRWQ6HJ=s1360-w1360-h1020-rw"
     },
     { 
         name: "Mumbai Kickers", 
@@ -13,7 +14,8 @@ const turfs = [
         price: "1500", 
         rating: "4.5", 
         slots: ["20:00", "22:00"], 
-        booked: ["18:00", "21:00"] 
+        booked: ["18:00", "21:00"] ,
+        img:"https://lh3.googleusercontent.com/p/AF1QipOnvoL1RohrQVSkMj2CI0fh4cICEr1ho-KucBR3=s1360-w1360-h1020-rw"
     }
 ];
 
@@ -30,20 +32,43 @@ function filterTurfs() {
             t.slots.forEach(s => btns += `<button class="slot-btn" onclick="this.classList.toggle('selected')">${s}</button>`);
             t.booked.forEach(b => btns += `<button class="slot-btn booked" disabled>${b}</button>`);
 
-            grid.innerHTML += `
-                <div class="turf-card">
-                    <div style="display:flex; justify-content:space-between;">
-                        <h3>${t.name}</h3>
-                        <div class="rating">★ ${t.rating}</div>
-                    </div>
-                    <p style="font-size:12px; color:#666;">📍 ${t.loc.toUpperCase()}</p>
-                    <div class="price">₹${t.price} <span style="font-size:12px; font-weight:400;">/ hr</span></div>
-                    
-                    <p style="font-size:13px; font-weight:700; margin-bottom:10px;">Select Time Slots:</p>
-                    <div class="slot-grid">${btns}</div>
-                    
-                    <button class="book-now-btn" onclick="handleBooking('${t.name}')">Confirm & Book Now</button>
-                </div>`;
+          grid.innerHTML += `
+    <div class="turf-card">
+
+        <div class="turf-image">
+            <img src="${t.img}" alt="${t.name}">
+        </div>
+
+        <div class="turf-details">
+            <div style="display:flex; justify-content:space-between;">
+                <h3>${t.name}</h3>
+                <div class="rating">★ ${t.rating}</div>
+            </div>
+
+            <p style="font-size:12px; color:#666;">
+                📍 ${t.loc.toUpperCase()}
+            </p>
+
+            <div class="price">
+                ₹${t.price}
+                <span style="font-size:12px; font-weight:400;">/ hr</span>
+            </div>
+
+            <p style="font-size:13px; font-weight:700; margin:10px 0;">
+                Select Time Slots:
+            </p>
+
+            <div class="slot-grid">${btns}</div>
+
+            <button class="book-now-btn"
+                onclick="handleBooking('${t.name}')">
+                Confirm & Book Now
+            </button>
+        </div>
+
+    </div>
+`;
+
         });
     } else {
         grid.innerHTML = "<p>No turfs found in that area. Try 'Vile Parle'.</p>";
