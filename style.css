@@ -43,7 +43,25 @@ header {
     align-items: center;
     width: 100%;
     max-width: 1200px;
+     height: 80px;
 }
+.nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;   /* pushes everything to right */
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
 
 .logo {
     color: white;
@@ -734,9 +752,7 @@ header {
 
 
 /* Hide toggle on desktop */
-.menu-toggle {
-    display: none;
-}
+
 
 .hero-image-slot {
     position: relative;
@@ -792,30 +808,64 @@ header {
 }
 .menu-toggle {
     display: none;
+
+    flex-direction: column;
+    justify-content: center;   /* 🔥 ADD THIS */
+    align-items: center;       /* 🔥 ADD THIS */
+    cursor: pointer;
+      height: 32px;
 }
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;   /* 🔥 change this from 5px auto */
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 
 @media (max-width: 900px) {
 
     .menu-toggle {
-        display: block;
-        cursor: pointer;
+        display: flex;
+        z-index: 1001;
     }
 
-    .nav-links,
-    .nav-buttons {
+    /* Make the wrapper the sidebar */
+    .nav-menu-wrapper {
         position: fixed;
+        top: 0;
         left: -100%;
-        top: 70px;
-        width: 100%;
+        width: 280px;
+        height: 100vh;
         background-color: var(--dark-green);
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        transition: 0.3s ease;
-        padding: 20px 0;
+        padding: 80px 20px;
+        transition: 0.4s ease;
+        z-index: 1000;
     }
 
-    .nav-links.active,
-    .nav-buttons.active {
+    /* Slide in */
+    .nav-menu-wrapper.active {
         left: 0;
     }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-buttons {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .role-btn {
+        width: 100%;
+    }
 }
+
