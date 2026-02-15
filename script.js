@@ -46,3 +46,44 @@ function playVideo() {
     video.play();
     document.querySelector(".play-btn").style.display = "none";
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    document.querySelector(".next").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+        setTimeout(autoSlide, 3000);
+    }
+
+    setTimeout(autoSlide, 3000);
+
+});
+// ===== Mobile Menu Toggle =====
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.querySelector(".nav-links");
+const navButtons = document.querySelector(".nav-buttons");
+
+mobileMenu.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    navButtons.classList.toggle("active");
+});
+

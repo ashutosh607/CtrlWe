@@ -7,11 +7,16 @@
     --warm-grey: #CBC8C4;
     --white: #ffffff;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -40,10 +45,21 @@ header {
     max-width: 1200px;
 }
 
-.logo { color: white; font-weight: 800; font-size: 14px; letter-spacing: 1px; }
-.logo span { color: var(--moss-green); }
+.logo {
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
 
-.nav-links { display: flex; gap: 10px; }
+.logo span {
+    color: var(--moss-green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
 
 .nav-item {
     position: relative;
@@ -60,16 +76,23 @@ header {
 .nav-item::after {
     content: "";
     position: absolute;
-    top: 0; left: 50%;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
-    width: 0; height: 3px;
+    width: 0;
+    height: 3px;
     background: white;
     box-shadow: 0 0 10px white;
     transition: 0.3s;
 }
 
-.nav-item:hover { color: white; }
-.nav-item:hover::after { width: 100%; }
+.nav-item:hover {
+    color: white;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
 
 .role-btn {
     background: transparent;
@@ -83,7 +106,10 @@ header {
     transition: 0.3s;
 }
 
-.role-btn:hover { background: var(--moss-green); color: white; }
+.role-btn:hover {
+    background: var(--moss-green);
+    color: white;
+}
 
 /* --- Hero Section --- */
 .hero {
@@ -93,10 +119,27 @@ header {
     min-height: 500px;
 }
 
-.hero-content { display: flex; align-items: center; gap: 40px; }
-.hero-text { flex: 1; }
-.hero-text h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
-.tagline { color: var(--moss-green); font-weight: 600; margin-bottom: 10px; }
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.tagline {
+    color: var(--moss-green);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 
 .cta-btn {
     background: white;
@@ -107,9 +150,11 @@ header {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .hero-image-slot {
     width: 100%;
-    height: 400px; /* adjust as needed */
+    height: 400px;
+    /* adjust as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,27 +164,35 @@ header {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 15px; /* optional */
+    border-radius: 15px;
+    /* optional */
 }
 
 .image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* 🔥 important */
+    object-fit: cover;
+    /* 🔥 important */
 }
 
 
 .hero-image-slot {
     flex: 1.2;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     height: 350px;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* --- Advantages Grid --- */
-.advantages { padding: 100px 10%; text-align: center; }
+.advantages {
+    padding: 100px 10%;
+    text-align: center;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -151,26 +204,81 @@ header {
     background: var(--light-blue);
     height: 300px;
     border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 800; color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--dark-green);
     transition: 0.3s;
 }
-.card:hover { transform: translateY(-10px); background: var(--moss-green); color: white; }
+
+.card:hover {
+    transform: translateY(-10px);
+    background: var(--moss-green);
+    color: white;
+}
 
 /* --- Value Prop --- */
 .value-prop {
-    display: flex; gap: 50px; padding: 100px 10%;
-    background: #fff; align-items: center;
+    display: flex;
+    gap: 50px;
+    padding: 100px 10%;
+    background: #fff;
+    align-items: center;
 }
-.value-text { flex: 1; }
-.value-image { flex: 1; background: var(--light-blue); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+
+.value-text {
+    flex: 1;
+}
+
+.value-image {
+    flex: 1;
+    background: var(--light-blue);
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* --- Features Dashboard --- */
-.features { background: var(--dark-green); color: white; padding: 100px 10%; }
-.features-layout { display: flex; gap: 30px; margin-top: 50px; }
-.video-placeholder { flex: 1.5; background: rgba(255,255,255,0.05); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-.feature-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.f-box { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 4px; font-size: 11px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
+.features {
+    background: var(--dark-green);
+    color: white;
+    padding: 100px 10%;
+}
+
+.features-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.video-placeholder {
+    flex: 1.5;
+    background: rgba(255, 255, 255, 0.05);
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.f-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 .grid-container {
     display: grid;
@@ -178,19 +286,25 @@ header {
     gap: 20px;
     padding: 20px;
 }
+
 .card {
-    height: 250px;            /* Important */
+    height: 250px;
+    /* Important */
     border-radius: 15px;
-    overflow: hidden;         /* Prevent image overflow */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    /* Prevent image overflow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* 🔥 Key Property */
+    object-fit: cover;
+    /* 🔥 Key Property */
     display: block;
-     background-color: #000;
+    background-color: #000;
 }
+
 .card {
     transition: 0.3s ease;
 }
@@ -198,40 +312,49 @@ header {
 .card:hover {
     transform: scale(1.05);
 }
+
 .value-prop {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
     padding: 80px 10%;
-     /* dark background for contrast */
-    
+    /* dark background for contrast */
+
 }
 
 .grid-container a {
-    text-decoration: none; /* Removes underlines */
-    display: block;        /* Ensures the link fills the whole card area */
+    text-decoration: none;
+    /* Removes underlines */
+    display: block;
+    /* Ensures the link fills the whole card area */
 }
 
 .card img {
-    width: 100%;           /* Ensures the images fit perfectly inside the cards */
+    width: 100%;
+    /* Ensures the images fit perfectly inside the cards */
     height: auto;
     display: block;
-    border-radius: 8px;    /* Optional: matches your card corners */
+    border-radius: 8px;
+    /* Optional: matches your card corners */
 }
+
 .value-image {
     width: 100%;
-    height: 350px;   /* Set fixed height for the box */
+    height: 350px;
+    /* Set fixed height for the box */
     overflow: hidden;
 }
 
 .match-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* Makes image fill without distortion */
+    object-fit: cover;
+    /* Makes image fill without distortion */
     display: block;
     object-fit: contain;
-background-color: #000; /* optional if you want clean background */
+    background-color: #000;
+    /* optional if you want clean background */
 
 }
 
@@ -258,7 +381,7 @@ background-color: #000; /* optional if you want clean background */
     padding: 30px;
     width: 340px;
     border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     text-align: center;
     opacity: 0;
     visibility: hidden;
@@ -306,18 +429,21 @@ background-color: #000; /* optional if you want clean background */
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
 }
+
 /* --- RESPONSIVE MEDIA QUERIES --- */
 
 /* 1. For Tablets (Laptops & iPads) */
 @media (max-width: 992px) {
     .hero-content {
-        flex-direction: column; /* Stacks text on top of image */
+        flex-direction: column;
+        /* Stacks text on top of image */
         text-align: center;
     }
 
     .hero-image-slot {
         width: 100%;
-        height: 300px; /* Reduces height so photo isn't too long */
+        height: 300px;
+        /* Reduces height so photo isn't too long */
     }
 
     .value-prop {
@@ -332,25 +458,28 @@ background-color: #000; /* optional if you want clean background */
 
 /* 2. For Mobile Phones */
 @media (max-width: 600px) {
-    .navbar {
+    /*.navbar {
         flex-direction: column;
         padding: 15px 0;
         gap: 10px;
-    }
+    }*/
 
     .hero-text h1 {
-        font-size: 2rem; /* Shrinks text so it doesn't overflow */
+        font-size: 2rem;
+        /* Shrinks text so it doesn't overflow */
     }
 
     .grid-container {
-        grid-template-columns: 1fr; /* Single column: photo takes full width */
+        grid-template-columns: 1fr;
+        /* Single column: photo takes full width */
         gap: 15px;
     }
 
     /* Essential to keep photos from cropping weirdly on small screens */
-    .card img, .hero-image-slot img {
-        height: 250px; 
-        object-fit: cover; 
+    .card img,
+    .hero-image-slot img {
+        height: 250px;
+        object-fit: cover;
     }
 
     .feature-grid {
@@ -375,14 +504,16 @@ background-color: #000; /* optional if you want clean background */
 
 /* ===== BIG Video Section ===== */
 .video-placeholder {
-    flex: 2;              /* 🔥 makes it bigger */
-    height: 500px;        /* bigger height */
-    background: rgba(255,255,255,0.05);
+    flex: 2;
+    /* 🔥 makes it bigger */
+    height: 500px;
+    /* bigger height */
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .play-icon {
@@ -392,7 +523,8 @@ background-color: #000; /* optional if you want clean background */
 
 /* ===== Feature Grid ===== */
 .feature-grid {
-    flex: 1;              /* smaller than video */
+    flex: 1;
+    /* smaller than video */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -400,43 +532,51 @@ background-color: #000; /* optional if you want clean background */
 
 /* ===== Feature Boxes Same Size ===== */
 .f-box {
-    background: rgba(255,255,255,0.05);
-    height: 160px;           /* same height */
+    background: rgba(255, 255, 255, 0.05);
+    height: 160px;
+    /* same height */
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: 0.3s ease;
 }
 
 .f-box:hover {
     transform: translateY(-5px);
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* ===== Images Fit Properly ===== */
 .f-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* 🔥 important */
+    object-fit: cover;
+    /* 🔥 important */
     display: block;
 }
+
 .video-placeholder {
     flex: 2;
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;   /* 🔥 keeps video responsive */
+    aspect-ratio: 16 / 9;
+    /* 🔥 keeps video responsive */
     border-radius: 12px;
-    overflow: hidden;       /* 🔥 stops overflow */
-    background: rgba(255,255,255,0.05);
+    overflow: hidden;
+    /* 🔥 stops overflow */
+    background: rgba(255, 255, 255, 0.05);
 }
+
 .video-placeholder video {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* or use contain */
+    object-fit: cover;
+    /* or use contain */
 }
+
 .video-placeholder {
     position: relative;
     width: 100%;
@@ -462,31 +602,55 @@ background-color: #000; /* optional if you want clean background */
     font-size: 60px;
     color: white;
     cursor: pointer;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .play-btn:hover {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
+
 /* --- Animation Keyframes --- */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes pulseNeon {
-    0% { box-shadow: 0 0 5px var(--moss-green); }
-    50% { box-shadow: 0 0 20px var(--moss-green); }
-    100% { box-shadow: 0 0 5px var(--moss-green); }
+    0% {
+        box-shadow: 0 0 5px var(--moss-green);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--moss-green);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--moss-green);
+    }
 }
+
 .hero-text {
     animation: slideInLeft 1s ease-out;
 }
@@ -502,10 +666,22 @@ background-color: #000; /* optional if you want clean background */
 }
 
 /* Staggering the cards slightly */
-.grid-container a:nth-child(1) .card { animation-delay: 0.2s; }
-.grid-container a:nth-child(2) .card { animation-delay: 0.4s; }
-.grid-container a:nth-child(3) .card { animation-delay: 0.6s; }
-.grid-container a:nth-child(4) .card { animation-delay: 0.8s; }
+.grid-container a:nth-child(1) .card {
+    animation-delay: 0.2s;
+}
+
+.grid-container a:nth-child(2) .card {
+    animation-delay: 0.4s;
+}
+
+.grid-container a:nth-child(3) .card {
+    animation-delay: 0.6s;
+}
+
+.grid-container a:nth-child(4) .card {
+    animation-delay: 0.8s;
+}
+
 /* CTA Button Upgrade */
 .cta-btn {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -522,9 +698,12 @@ background-color: #000; /* optional if you want clean background */
 
 /* Nav Item Upgrade */
 .nav-item:hover {
-    letter-spacing: 3px; /* Smooth text expansion */
+    letter-spacing: 3px;
+    /* Smooth text expansion */
     color: white;
-}/* Feature Box Hover - Glassmorphism */
+}
+
+/* Feature Box Hover - Glassmorphism */
 .f-box {
     transition: 0.4s ease;
     cursor: pointer;
@@ -547,50 +726,96 @@ background-color: #000; /* optional if you want clean background */
 }
 
 .card:hover img {
-    transform: scale(1.15) rotate(1deg); /* Subtle zoom and tilt */
-}/* --- Responsive Navbar Styles --- */
-@media (max-width: 768px) {
+    transform: scale(1.15) rotate(1deg);
+    /* Subtle zoom and tilt */
+}
+
+/* --- Responsive Navbar Styles --- */
+
+
+/* Hide toggle on desktop */
+.menu-toggle {
+    display: none;
+}
+
+.hero-image-slot {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Arrow Buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+
     .menu-toggle {
         display: block;
         cursor: pointer;
     }
 
-    .menu-toggle .bar {
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: white;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .nav-links {
+    .nav-links,
+    .nav-buttons {
         position: fixed;
-        left: -100%; /* Hides the menu off-screen */
+        left: -100%;
         top: 70px;
-        flex-direction: column;
-        background-color: var(--dark-green);
         width: 100%;
+        background-color: var(--dark-green);
+        flex-direction: column;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        z-index: 1000;
+        transition: 0.3s ease;
+        padding: 20px 0;
     }
 
-    .nav-links.active {
-        left: 0; /* Slides the menu in */
+    .nav-links.active,
+    .nav-buttons.active {
+        left: 0;
     }
-
-    .nav-item {
-        margin: 15px 0;
-        display: block;
-    }
-
-    /* Animation for Hamburger to X */
-    #mobile-menu.is-active .bar:nth-child(2) { opacity: 0; }
-    #mobile-menu.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    #mobile-menu.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
-
-/* Hide toggle on desktop */
-.menu-toggle { display: none; }

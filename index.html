@@ -14,16 +14,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">TURF<span>MATCH</span></div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <div class="nav-links">
                 <a href="#home" class="nav-item">Home</a>
                 <a href="#turfs" class="nav-item">Turfs</a>
                 <a href="#matchmaking" class="nav-item">Matchmaking</a>
                 <a href="#dashboard" class="nav-item">Dashboard</a>
             </div>
-            <div>
-                <button class="role-btn" id="scroll">Provider Mode</button>
-                <button class="role-btn signin-btn">Sign in</button>
-            </div>
+             <div class="nav-buttons">
+        <button class="role-btn" id="scroll">Provider Mode</button>
+        <button class="role-btn signin-btn">Sign in</button>
+    </div>
         </nav>
     </header>
 
@@ -36,8 +41,23 @@
                     <button class="cta-btn">Book Now</button>
                 </div>
                 <div class="hero-image-slot">
-                    <div class="image-box"><img src="assests/turf.png" alt=""></div>
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="assests/turf.png" class="slide active">
+                            <img src="https://www.gwsportsapp.in/blog/wp-content/uploads/2017/05/MC43NjkzMjQwMCAxNDg5OTkyNjEw.jpeg"
+                                class="slide">
+                            <img src="https://content.jdmagicbox.com/v2/comp/mumbai/c9/022pxx22.xx22.220309094053.q6c9/catalogue/five-nine-turf-andheri-mumbai-sports-turf-grounds-x660dsuuqi.jpg"
+                                class="slide">
+                            <img src="https://5.imimg.com/data5/ANDROID/Default/2021/9/QW/IX/MV/53469450/product-jpeg-1000x1000.jpg"
+                                alt="" class="slide">
+                        </div>
+
+                        <!-- Arrow Buttons -->
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
                 </div>
+
         </section>
 
         <section class="advantages" id="turfs">
@@ -83,7 +103,7 @@
                 </div>
 
             </section>
-            
+
         </section>
 
         <section class="features" id="dashboard">
