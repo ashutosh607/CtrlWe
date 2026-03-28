@@ -111,7 +111,7 @@ document.querySelectorAll(".nav-item").forEach(link => {
 });
 
 // Close when clicking outside
-document.addEventListener("click", function (event) {
+/*document.addEventListener("click", function (event) {
     if (
         !navWrapper.contains(event.target) &&
         !mobileMenu.contains(event.target)
@@ -120,7 +120,7 @@ document.addEventListener("click", function (event) {
         navWrapper.classList.remove("active");
     }
 });
-
+*/
 
 document.addEventListener("click", function (event) {
 
